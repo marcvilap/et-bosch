@@ -12,6 +12,12 @@ document.querySelectorAll<HTMLDialogElement>('dialog[popover]').forEach(dialog =
 	})
 })
 
+document.querySelectorAll<HTMLElement>('[data-popover]').forEach(elem => {
+	elem.addEventListener('click', () => {
+		document.querySelector<HTMLDialogElement>(`#${elem.dataset.popover}`)?.showPopover()
+	})
+})
+
 gsap.utils.toArray<HTMLElement>('[data-parallax-y]').forEach(element => {
 	const offset = Number(element.dataset.parallaxY || 6)
 	gsap.fromTo(element, { y: `${offset}rem` }, { y: `${offset * -1}rem`, ease: 'none', scrollTrigger: { trigger: element.parentElement, scrub: true } })
