@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import SvgMap from '@/assets/icons/mapa.svg'
+import SvgCanarias from '@/assets/icons/canarias.svg'
+import imgNubes from '@/assets/images/nubes.webp'
+---
+
+<section class="relative overflow-clip pb-32">
+	<div class="container">
+		<div data-txt-fade-up class="space-y-9 text-center">
+			<h2 class="text-4xl font-bold text-[#00619D] md:text-6xl">¿Se secará la ropa hoy?</h2>
+			<p class="text-2xl font-bold">Consulta el índice de secabilidad</p>
+			<p><a class="inline-block rounded bg-[#00619D] px-6 py-3 font-bold text-white transition-transform hover:scale-95" href="">Seca #LikeABosch</a></p>
+		</div>
+
+		<div class="my-24 grid grid-cols-2 font-bold text-white max-lg:text-sm md:grid-cols-4">
+			<button popovertarget="clima-1" class="cursor-pointer bg-[#0082D2] px-4 py-3 transition-transform hover:scale-95">Clima Oceánico</button>
+			<button popovertarget="clima-2" class="cursor-pointer bg-[#00AAE1] px-4 py-3 transition-transform hover:scale-95">Clima Continental</button>
+			<button popovertarget="clima-3" class="cursor-pointer bg-[#8CD26E] px-4 py-3 transition-transform hover:scale-95">Clima Mediterráneo</button>
+			<button popovertarget="clima-4" class="cursor-pointer bg-[#FBC466] px-4 py-3 transition-transform hover:scale-95">Clima Tropical</button>
+		</div>
+
+		<div data-img-zoom-in class="relative mx-auto max-w-3xl">
+			<SvgMap />
+			<SvgCanarias class="absolute -bottom-24 left-0 z-10 w-1/3 opacity-80 md:bottom-1/4 md:-left-24 xl:-left-48" />
+		</div>
+	</div>
+
+	<Image data-parallax-y={-6} class="pointer-events-none absolute bottom-0 left-0 mask-t-from-50% object-cover opacity-80" src={imgNubes} width={1920} alt="" />
+</section>

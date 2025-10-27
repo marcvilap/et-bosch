@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import img from '@/assets/images/image.webp'
+---
+
+<section class="py-32">
+	<div class="container">
+		<div class="mb-32 grid items-center gap-y-12 lg:grid-cols-2">
+			<div data-img-zoom-in>
+				<Image src={img} width={740} densities={[2]} alt="" />
+			</div>
+			<div data-txt-fade-up class="space-y-6 md:pl-12 xl:pl-24">
+				<p>“No existe el mal tiempo, sino la ropa inadecuada”. Con esta expresión popular, los escandinavos continúan con su ritmo todos los inviernos: da igual si llueve, nieva o las temperaturas bajan al mínimo, porque ellos estarán preparados para continuar con su vida en el exterior.</p>
+				<p>Pero, ¿qué ocurre cuando tienen que lavar toda esa ropa? Seguro que en este momento estarás pensando en la pesadilla de todo el que se enfrenta a la colada en días de lluvia o en zonas de costa: incómodos tendederos interiores, horas y horas (incluso días) de espera o el temido olor a humedad impregnado en los tejidos.</p>
+			</div>
+		</div>
+
+		<div data-txt-fade-up class="mx-auto max-w-3xl space-y-9 text-center">
+			<p class="text-2xl font-bold">Analizamos cómo cada rincón de España marca su propio ritmo de secado y descubrimos de qué manera la tecnología de Bosch ayuda a esquivar las inclemencias para ganar tiempo y comodidad.</p>
+			<p class="text-lg font-medium">La marca alemana sabe muy bien lo que significa un invierno con difíciles condiciones meteorológicas, así que ha creado una completa gama de secadoras para hacerte la vida más fácil y para que empieces a ver los días de lluvia con otros ojos (sí, es posible).</p>
+			<p class="text-lg font-bold text-[#00619D]">Porque al mal tiempo, buena secadora.</p>
+		</div>
+	</div>
+</section>

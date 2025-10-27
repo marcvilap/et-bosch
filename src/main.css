@@ -1,0 +1,29 @@
+@font-face {
+	font-family: Murecho;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: 'swap';
+	src: url(/murecho-100-900.woff2) format('woff2-variations');
+}
+
+@import 'tailwindcss';
+
+@theme {
+	--default-transition-duration: 0.3s;
+	--font-sans: Murecho, sans-serif;
+	--breakpoint-sm: 28rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: initial;
+}
+
+@layer base {
+	html {
+		@apply text-neutral-500 max-[400px]:text-[4vw] min-[1536px]:text-[1.125vw] min-[1920px]:text-[20px];
+	}
+}
+
+@utility container {
+	@apply mx-auto px-6 md:px-12;
+}

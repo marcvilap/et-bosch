@@ -1,0 +1,8 @@
+---
+import { Image } from 'astro:assets'
+import img from '@/assets/images/banner.webp'
+---
+
+<section class="relative flex h-96 items-center overflow-clip bg-black xl:h-140">
+	<Image data-parallax-y={-4} class="absolute w-full object-cover max-md:h-full" src={img} width={1920} alt="" />
+</section>
